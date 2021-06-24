@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/signUpIn.css">
+    <link rel="stylesheet" href="../css/NavFood.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="signUpIn_test.js"></script>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="main.html"><img id = "mainIcon" alt="battery mascot" src="../images/MainIcon.jpg"></a></li>
+        <li><a href="shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon" src="../images/ShoppingCart2.jpg"></a></li>
+        <li><a href="shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop2.jpg" ></a></li>
+    </ul>
+</header>
+<main>
+    <section class="signupclasstemp">
+        <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
+
+        <!-- links oder buttons? aktuell: buttons mit javascript dom -->
+        <ul class="signupin_tab-group">
+            <li><a href="#" id="goToSignUp" class="tab active">Sign Up</a></li>
+            <li><a href="#" id="goToSignIn" class="tab">Sign In</a></li>
+        </ul>
+
+        <h1>Create your account</h1>
+
+        <section class="tab-content">
+            <section class="signupinform" id="signupform" style="display: none">
+                <form action="main.html">
+
+                    <section class="field">
+                        <label for="first_name"></label>
+                        <input type="text" name="first_name" id="first_name" placeholder="First name" required>
+                    </section>
+                    <section class="field">
+                        <label for="last_name"></label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
+                    </section>
+
+                    <section id="contact">
+                        <label for="e-mail_signUp"></label>
+                        <input type="email" name="e-mail" id="e-mail_signUp" placeholder="user@example.com" required>
+                        <br>
+                        <label for="tel"></label>
+                        <input type="tel" name="tel" id="tel" value="+43" required>
+                        <br>
+                    </section>
+
+
+                    <section id="address">
+                        <label for="street"></label>
+                        <input type="text" name="street" id="street" placeholder="Street" required>
+                        <br>
+                        <label for="street_number"></label>
+                        <input type="text" name="street_number" id="street_number" placeholder="no." required>
+                        <br>
+                        <label for="city"></label>
+                        <input type="text" name="city" id="city" placeholder="City" required>
+                        <br>
+                        <label for="country"></label>
+                        <input type="text" name="country" id="country" placeholder="Country" required>
+                    </section>
+
+                    <label for="sign_up_submit"></label>
+                    <input type="submit" class="submitbutton" id="sign_up_submit" value="I want to sign up now"
+                           onclick="">
+                </form>
+            </section>
+
+            <section class="signupinform" id="signinform"><!--style="display: none" (innerhalb der section klammern) -->
+                <form action="auth" method="POST">
+                    <section class="field">
+                        <label for="e-mail_signIn"></label>
+                        <input type="text" name="email" id="e-mail_signIn" placeholder="your@email.com" required>
+                    </section>
+                    <section class="field">
+                        <label for="password"></label>
+                        <input type="text" name="password" id="password" placeholder="password" required>
+                    </section>
+                    <p>Forgot your password?
+                        <button id="buttonForgotPassword">Click!</button>
+                    </p>
+                    <label for="login_submit"></label>
+                    <input type="submit" class="submitbutton" id="login_submit" value="Login"
+                           onclick="">
+                </form>
+            </section>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <p>Impressum: Da steht was <br>
+        Kontakt: Adresse <br>
+        Jobs(optional)<br>
+        <a href="feedback.html">Feedback</a></p>
+</footer>
+</body>
+</html>
